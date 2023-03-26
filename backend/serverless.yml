@@ -1,7 +1,7 @@
 # TODO: Change the name of the org 
 org: samsam237
-app: serverless-todo-app-5
-service: serverless-todo-app-5
+app: serverless-todo-app-5-2
+service: serverless-todo-app-5-2
 frameworkVersion: '3.28.1'
 
 plugins:
@@ -24,11 +24,11 @@ provider:
   # Use these variables in the functions and resouorces section below. For example, 
   # ${self:provider.environment.ATTACHMENT_S3_BUCKET}
   environment:
-    TODOS_TABLE: Serverless-c5-todo-5-${self:provider.stage}
-    TODOS_CREATED_AT_INDEX: CreatedAtIndex
-    ATTACHMENT_S3_BUCKET: serverless-c5-todo-app-5-images-${self:provider.stage}
+    TODOS_TABLE: Serverless-c5-todo-5-2-${self:provider.stage}
+    TODOS_CREATED_AT_INDEX: CreatedAtIndeX
+    ATTACHMENT_S3_BUCKET: serverless-c5-todo-app-5-images-sam2sam237-${self:provider.stage}
     SIGNED_URL_EXPIRATION: 300
-    PROJECT_NAME: serverless-todo-app-5
+    PROJECT_NAME: serverless-todo-app-5-2
     INDEX_NAME: ${self:provider.environment.TODOS_CREATED_AT_INDEX}
 
   logs:
@@ -197,7 +197,7 @@ resources:
               - AttributeName: userId
                 KeyType: HASH
               - AttributeName: CreatedAt
-                KeyType: Range
+                KeyType: RANGE
             Projection:
               ProjectionType: ALL # what attributes will be copied to an index
 
